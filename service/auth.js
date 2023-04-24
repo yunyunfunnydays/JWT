@@ -14,6 +14,7 @@ const generateSendJWT = (user, statusCode, res) => {
       expiresIn: process.env.JWT_EXPIRES_DAY,
     },
   );
+
   user.passWord = undefined;
   res.status(statusCode).json({
     status: 'success',
@@ -27,7 +28,7 @@ const generateSendJWT = (user, statusCode, res) => {
 const isAuth = handleErrorAsync(async (req, res, next) => {
   let token;
   if (req.headers.authorization
-      && req.headers.authorization.startsWith('Bearer')) {
+    && req.headers.authorization.startsWith('Bearer')) {
     token = req.headers.authorization.split(' ')[1];
   }
   if (!token) {
