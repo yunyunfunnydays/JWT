@@ -1,16 +1,12 @@
-# JWT
-A concise and efficient project description.
+# JWT Demo
 
-Getting Started
-These instructions will help you set up and run the project on your local machine.
+Download and import postman_collection.json to test API with postman.
 
-Prerequisites
-Node.js installed
-Yarn installed
-Postman installed
-Import Postman file for testing
-Import the provided Postman file into Postman to test the API endpoints.
+---
+## Environment Variables
 
-Note: The render server goes idle after 15 minutes. If you don't receive a proper response, please try again.
-
-Clone and Install the Project
+DATABASE=
+DATABASE_PASSWORD=
+SALT=
+JWT_EXPIRES_DAY=
+JWT_SECRET=
