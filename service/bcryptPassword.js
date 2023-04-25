@@ -1,4 +1,4 @@
-const bcrypt = require('bcryptjs');
+import bcrypt from 'bcryptjs';
 
 const bcryptPassword = async (appliedPassword) => {
   const salt = bcrypt.genSaltSync(Number(process.env.SALT));

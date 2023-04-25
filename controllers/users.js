@@ -1,12 +1,11 @@
-const bcrypt = require('bcryptjs/dist/bcrypt');
-const validator = require('validator');
+import bcrypt from 'bcryptjs';
+import validator from 'validator';
 
-const User = require('../model/UsersModel');
+import User from '../model/UsersModel';
 
-const appError = require('../service/appError');
-const bcryptPassword = require('../service/bcryptPassword');
-const { generateSendJWT } = require('../service/auth');
-const handleSuccess = require('../service/handleSuccess');
+import appError from '../service/appError';
+import bcryptPassword from '../service/bcryptPassword';
+import handleSuccess from '../service/handleSuccess';
 
 const usersControllers = {
   async signUp(req, res, next) {

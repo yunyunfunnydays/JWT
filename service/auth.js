@@ -1,7 +1,9 @@
-const jwt = require('jsonwebtoken');
-const handleErrorAsync = require('./handleErrorAsync');
-const appError = require('./appError');
-const User = require('../model/UsersModel');
+import jwt from 'jsonwebtoken';
+import handleErrorAsync from './handleErrorAsync';
+import appError from './appError';
+import User from '../model/UsersModel';
+
+
 
 const generateSendJWT = (user, statusCode, res) => {
   const token = jwt.sign(

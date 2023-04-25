@@ -1,7 +1,8 @@
-const express = require('express');
-const handleErrorAsync = require('../service/handleErrorAsync');
-const usersControllers = require('../controllers/users');
-const { isAuth } = require('../service/auth');
+import express from 'express';
+import handleErrorAsync from '../service/handleErrorAsync';
+import usersControllers from '../controllers/users';
+import { isAuth } from '../service/auth';
+
 
 const router = express.Router();
 
