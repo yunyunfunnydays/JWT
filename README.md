@@ -24,8 +24,8 @@ SALT=
 JWT_EXPIRES_DAY=  
 JWT_SECRET=  
 ```
-DATABASE： your mongoDB url
-DATABASE_PASSWORD： your mongoDB PASSWORD
-SALT： encryption salt for bcrypt
-JWT_EXPIRES_DAY： expires day for JWT
-JWT_SECRET： encryption salt for JWT
+DATABASE： your mongoDB url  
+DATABASE_PASSWORD： your mongoDB PASSWORD  
+SALT： encryption salt for bcrypt  
+JWT_EXPIRES_DAY： expires day for JWT  
+JWT_SECRET： encryption salt for JWT  
