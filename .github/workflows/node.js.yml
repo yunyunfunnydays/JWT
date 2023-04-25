@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "cicd-test" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "cicd-test" ]
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [16.x,18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -28,7 +28,6 @@ jobs:
         cache: 'yarn'
     - run: yarn install --frozen-lockfile
     - name: Start server
-      run: yarn start
+      run: yarn test:ci
       env:
-        NODE_ENV: 'development'
         DATABASE: ${{ secrets.DATABASE }}
