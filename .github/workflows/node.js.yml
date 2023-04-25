@@ -27,5 +27,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
     - run: yarn install --frozen-lockfile
-    - run: yarn start
-
+    - run: yarn build --if-present
+    - run: yarn test --if-present
+    - name: Start server
+      run: yarn start
+      env:
+        NODE_ENV: 'development'
+        DATABASE: ${{ secrets.DATABASE }}
