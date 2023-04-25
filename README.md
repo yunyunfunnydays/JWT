@@ -18,6 +18,8 @@ yarn start:babel
 ## Environment Variables
 
 ```
+config.env
+
 DATABASE=  
 DATABASE_PASSWORD=  
 SALT=  
