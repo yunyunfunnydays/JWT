@@ -6,6 +6,7 @@ import User from '../model/UsersModel';
 import appError from '../service/appError';
 import bcryptPassword from '../service/bcryptPassword';
 import handleSuccess from '../service/handleSuccess';
+import { generateSendJWT } from '../service/auth';
 
 const usersControllers = {
   async signUp(req, res, next) {
