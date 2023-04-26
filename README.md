@@ -12,7 +12,7 @@ yarn
 To run the project, use the following command:  
 
 ```
-yarn start:babel  
+yarn start
 ```
 
 ## Environment Variables
