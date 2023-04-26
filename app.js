@@ -1,6 +1,3 @@
-// import test from './test.js';
-// test('hello world');
-
 import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
