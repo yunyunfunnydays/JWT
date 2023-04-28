@@ -33,8 +33,8 @@ const usersControllers = {
       appError(400, '密碼字數需為8碼以上', next);
       return;
     }
-    if (!validator.isStrongPassword(appliedPassword, { minNumbers: 1, minSymbols: 1 })) {
-      appError(400, '密碼需為英文、數字、符號組合', next);
+    if (validator.isAlpha(appliedPassword)) {
+      appError(400, '密碼需為英數混和', next);
       return;
     }
     if (!validator.isEmail(email)) {
@@ -99,8 +99,8 @@ const usersControllers = {
       appError(400, '密碼字數需為8碼以上', next);
       return;
     }
-    if (!validator.isStrongPassword(appliedPassword, { minNumbers: 1, minSymbols: 1 })) {
-      appError(400, '密碼需為英文、數字、符號組合', next);
+    if (validator.isAlpha(appliedPassword)) {
+      appError(400, '密碼需為英數混和', next);
       return;
     }
     const newPassword = await bcryptPassword(appliedPassword);
